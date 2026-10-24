@@ -354,3 +354,57 @@ footer {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* FIX: Setiap slide menjadi halaman tersendiri */
+body .slide {
+  display: none !important;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+body .slide.active {
+  display: block !important;
+  animation: pageEnter 0.35s ease both;
+}
+
+/* Home memakai layout flex */
+body .hero.slide.active {
+  display: flex !important;
+  min-height: 100vh;
+  align-items: center;
+}
+
+/* Kontrol navigasi slide */
+.slide-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.slide-indicator {
+  margin-top: 24px;
+  color: #AAB5CA;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body .slide.active {
+    animation: none;
+  }
+}
