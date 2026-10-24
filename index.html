@@ -29,23 +29,36 @@
     </nav>
   </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <p class="eyebrow">WELCOME TO MY UNIVERSE</p>
-        <h1>MUİZ ADKHA<br><span>MAULANA</span></h1>
-        <p class="hero-description">
-          Every hero has a story. This is mine.
-          Kenali saya melalui halaman personal ini.
-        </p>
-        <a href="#about" class="btn">KENALI SAYA ↘</a>
-      </div>
-      <div class="hero-symbol" aria-hidden="true">✳</div>
-    </section>
+  
+<main id="slideContainer">
 
-    <section class="section" id="about">
+  <!-- HALAMAN 1: HOME -->
+  <section class="page-slide active" id="home">
+    <div class="page-content hero-content">
+      <p class="eyebrow">WELCOME TO MY UNIVERSE</p>
+
+      <h1>MUİZ ADKHA<br><span>MAULANA</span></h1>
+
+      <p class="hero-description">
+        Every hero has a story. This is mine.
+        Kenali saya melalui halaman personal ini.
+      </p>
+
+      <button class="btn next-page" data-target="about">
+        KENALI SAYA →
+      </button>
+
+      <p class="page-number">01 / 04</p>
+    </div>
+    <div class="hero-symbol" aria-hidden="true">✳</div>
+  </section>
+
+  <!-- HALAMAN 2: BIODATA -->
+  <section class="page-slide" id="about">
+    <div class="page-content">
       <p class="eyebrow">01 / ABOUT ME</p>
-      <h2>Behind The <span>Mask.</span></h2>
+      <h2>BEHIND THE <span>MASK.</span></h2>
+
       <p class="section-intro">
         Halo! Saya Muiz Adkha Maulana.
         Ini adalah ruang kecil untuk memperkenalkan diri
@@ -54,25 +67,40 @@
 
       <div class="bio-grid">
         <article class="bio-card">
-          <span>01 — NAMA LENGKAP</span>
+          <span>NAMA LENGKAP</span>
           <h3>Muiz Adkha Maulana</h3>
         </article>
 
         <article class="bio-card">
-          <span>02 — TEMPAT, TANGGAL LAHIR</span>
+          <span>TEMPAT, TANGGAL LAHIR</span>
           <h3>Malang, 21 November 2009</h3>
         </article>
 
         <article class="bio-card">
-          <span>03 — DOMISILI</span>
-          <h3>Lebakharjo, Ampelgading, Malang</h3>
+          <span>DOMISILI</span>
+          <h3>Ampelgading, Malang</h3>
         </article>
       </div>
-    </section>
 
-    <section class="section story-section" id="story">
+      <div class="page-controls">
+        <button class="btn back-page" data-target="home">
+          ← KEMBALI
+        </button>
+        <button class="btn next-page" data-target="story">
+          SELANJUTNYA →
+        </button>
+      </div>
+
+      <p class="page-number">02 / 04</p>
+    </div>
+  </section>
+
+  <!-- HALAMAN 3: MY STORY -->
+  <section class="page-slide" id="story">
+    <div class="page-content">
       <p class="eyebrow">02 / MY STORY</p>
-      <h2>My Own <span>Journey.</span></h2>
+      <h2>MY OWN <span>JOURNEY.</span></h2>
+
       <p class="section-intro">
         Setiap orang punya cerita, tujuan, dan perjalanan
         masing-masing. Saya percaya bahwa setiap hari
@@ -85,13 +113,28 @@
           "Tidak harus menjadi superhero untuk
           melakukan sesuatu yang berarti."
         </p>
-        <span>— MY PERSONAL PRINCIPLE</span>
+        <span>MY PERSONAL PRINCIPLE</span>
       </div>
-    </section>
 
-    <section class="section contact-section" id="contact">
+      <div class="page-controls">
+        <button class="btn back-page" data-target="about">
+          ← KEMBALI
+        </button>
+        <button class="btn next-page" data-target="contact">
+          SELANJUTNYA →
+        </button>
+      </div>
+
+      <p class="page-number">03 / 04</p>
+    </div>
+  </section>
+
+  <!-- HALAMAN 4: INSTAGRAM -->
+  <section class="page-slide" id="contact">
+    <div class="page-content contact-content">
       <p class="eyebrow">03 / CONNECT</p>
-      <h2>Let's <span>Connect.</span></h2>
+      <h2>LET'S <span>CONNECT.</span></h2>
+
       <p class="section-intro">
         Ingin mengenal saya lebih jauh?
         Kunjungi akun Instagram saya.
@@ -104,8 +147,21 @@
         rel="noopener noreferrer">
         ◎ KUNJUNGI INSTAGRAM
       </a>
-    </section>
-  </main>
+
+      <div class="page-controls">
+        <button class="btn back-page" data-target="story">
+          ← KEMBALI
+        </button>
+        <button class="btn next-page" data-target="home">
+          KEMBALI KE HOME ↗
+        </button>
+      </div>
+
+      <p class="page-number">04 / 04</p>
+    </div>
+  </section>
+
+</main>
 
   <footer>
     <p>© <span id="year"></span> Muiz Adkha Maulana</p>
